@@ -29,8 +29,8 @@ exports.emailMessage = functions.https.onRequest((req, res) => {
         <p>${message || ""}</p>
       </div>`;
 
-      const sesAccessKey = 'hnahak270@gmail.com';
-      const sesSecretKey = 'Icando204';
+      const sesAccessKey = '***'; // gmail
+      const sesSecretKey = '***'; // gmail pwd
   
   
       let transporter = nodemailer.createTransport({
@@ -43,7 +43,7 @@ exports.emailMessage = functions.https.onRequest((req, res) => {
 
       const mailOptions = {
         from: email,
-        to: "info@visionfinserv.in",
+        to: "***", //reciever email
         subject: `${name} asking for a query`,
         text: text,
         html: text
